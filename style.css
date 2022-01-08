@@ -17,7 +17,7 @@ body {
     border-style: solid;
     border-color: cadetblue;
     min-width: 300px;
-    margin: 5px;
+    margin: 5px auto;
     padding: 5px;
 }
 ul,
@@ -107,11 +107,10 @@ p {
         font-size: 20px;
     }
     .wrapper {
-        margin: 10px;
+        margin: 10px auto;
         padding: 10px;
     }
     span {
-        /* margin: 0.8rem 5rem; */
         border: 1px solid cadetblue;
         padding: 0.1rem;
         width: 200px;
@@ -122,9 +121,6 @@ p {
         flex-direction: column;
         justify-content: flex-end;
     }
-    /* .buttons span {
-        align-self: flex-end;
-    } */
     ul li.checked::before {
         top: 10px;
     }
@@ -134,8 +130,8 @@ p {
         font-size: 20px;
     }
     .wrapper {
-        margin: 10px;
-        padding: 10px;
+        min-width: 768px;
+        max-width: 1080px;
     }
 
     span {
