@@ -1,0 +1,154 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 30px;
+}
+.wrapper {
+    border-width: 2px;
+    border-style: solid;
+    border-color: cadetblue;
+    min-width: 300px;
+    margin: 5px;
+    padding: 5px;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: flex-end; */
+    position: relative;
+    padding: 0 0 0 30px;
+}
+
+ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 20px;
+    left: 20px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+header {
+    min-width: 5rem;
+    background-color: cadetblue;
+    text-align: center;
+}
+span {
+    margin: 1rem;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid cadetblue;
+    padding: 0.3rem;
+    margin: 0.2rem 0;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+span:active {
+    background-color: #555;
+}
+input {
+    height: 2rem;
+    font-size: inherit;
+}
+.todo__text {
+    padding: 0 0 0 0.5rem;
+}
+h1 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1rem;
+}
+h4 {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    font-weight: normal;
+}
+p {
+    margin: 10px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+.todo__form {
+    display: flex;
+    flex-direction: column;
+}
+.todo__delete {
+    align-self: flex-end;
+    margin: 2px;
+    height: 15px;
+    width: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    .wrapper {
+        margin: 10px;
+        padding: 10px;
+    }
+    span {
+        /* margin: 0.8rem 5rem; */
+        border: 1px solid cadetblue;
+        padding: 0.1rem;
+        width: 200px;
+        align-self: flex-end;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    /* .buttons span {
+        align-self: flex-end;
+    } */
+    ul li.checked::before {
+        top: 10px;
+    }
+}
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    .wrapper {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    span {
+        width: 200px;
+        border: 1px solid cadetblue;
+        padding: 0.2rem;
+    }
+
+    li {
+        flex-direction: row;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
